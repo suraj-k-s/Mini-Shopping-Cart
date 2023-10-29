@@ -1,0 +1,45 @@
+<section class="container mt-5">
+  <table class="table mt-3">
+    <thead>
+      <tr>
+        <th scope="col">Item</th>
+        <th scope="col">Title</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each products}}
+        <tr>
+          <td> <img style="widht: 70px; height: 70px;" src="/images/{{this.product._id}}.jpg" alt=""> </td>
+          <td>{{this.product.Name}}</td>
+          <td>Rs.{{this.product.Price}}</td>
+          <td>
+            <button class="btn cart-item-count mr-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',-1)">-</button>
+            <span id="{{this.product._id}}">{{this.quantity}}</span>
+            <button class="btn cart-item-count ml-3" onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',1)">+</button> </td>
+          <td> <button type="button" name="button" class="btn btn-danger" onclick="removeCart('{{this._id}}','{{this.product._id}}')">Remove</button> </td>
+        </tr>
+        {{/each}}
+    </tbody>
+  </table>
+  <hr>
+  <div class="row">
+    <div class="col-12">
+      {{#if total}}
+      <h5 class="float-end">Total: Rs. <span id="total">{{total}}</span> </h5>
+      {{else}}
+      <h5 class="float-end">Cart Is Empty</h5>
+      {{/if}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      {{#if total}}
+      <a class="float-end btn btn-success" style="width: 170px;" href="/place-order">Place Order</a>
+      {{else}}
+      {{/if}}
+    </div>
+  </div>
+</section>

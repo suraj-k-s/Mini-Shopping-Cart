@@ -1,0 +1,38 @@
+<section>
+  <div class="container mt-5">
+    <div class="">
+      <h4 class="text-center">Login</h4>
+    </div>
+    <form action="/admin/login" method="post">
+      {{#if loginErr}}
+        <p class="text-center">{{loginErr}}</p>
+      {{else}}
+      {{/if}}
+      <!-- Email input -->
+      <div class="col-auto text-center">
+        <input name="Email" style="width: auto;" placeholder="Email" type="email" id="form2Example1" class="form-control login-signup-user-center" />
+      </div>
+
+      <!-- Password input -->
+      <div class="col-auto text-center">
+        <br>
+        <input name="Password" style="width: auto;" type="password" placeholder="Password" id="form2Example2" class="form-control login-signup-user-center" />
+      </div>
+
+      <!-- 2 column grid layout for inline styling -->
+
+
+      <!-- Submit button -->
+      <div class="text-center">
+        <br>
+        <button type="submit" class="btn btn-primary btn-block mb-4">Login</button>
+      </div>
+      <!-- Register buttons -->
+      <div class="text-center">
+        <p>Not a member? <a href="/signup">Sign Up</a></p>
+
+      </div>
+    </form>
+
+  </div>
+</section>

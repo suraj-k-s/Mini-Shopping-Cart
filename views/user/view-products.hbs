@@ -1,0 +1,24 @@
+<section>
+  <div class="container-fluid mt-5">
+    <div class="row">
+      {{#each products}}
+        <div class="col-12 col-md-3 mt-2">
+          <div class="card" style="width: auto;">
+            <div class="product-image-size-card">
+              <img src="/images/{{this._id}}.jpg" class="products-card-users" alt="...">
+              </div>
+              <div class="card-body">
+              <h5 class="card-title max-length-words">{{this.Name}}</h5>
+              <p class="card-text">Rs.{{this.Price}}</p>
+              <a href="/product?id={{this._id}}" style="text-decoration: none;color: black;"><p class="card-text max-length-words">{{this.Description}}</p></a>
+              <button onclick="addToCart('{{this._id}}')" class="btn btn-primary" type="button" name="button">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+
+
+
+    </div>
+  </div>
+</section>

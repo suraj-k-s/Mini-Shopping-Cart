@@ -1,0 +1,35 @@
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+.products-card-users {
+  width: 100%;
+  height: auto;
+  display: block;
+
+}
+
+.login-signup-user-center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cart-item-count{
+  background-color: gray;
+}
+
+.product-image-size-card{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: auto;
+  width: 171px;
+  height: 364px;
+}
+
+.max-length-words{
+  overflow: hidden;
+  max-width: 75ch;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,24 @@
+<section class="container mt-5">
+  <form action="/admin/update-order-status/{{orderProduct._id}}" method="post">
+    <h5>Products</h5>
+    {{#each orderItems}}
+    <label for="">{{this.product.Name}}</label>
+    <br>
+    {{/each}}
+    <br>
+    <label for="">Total Amout Rs. {{orderProduct.totalAmount}}</label>
+    <br>
+    <label for="">Status : {{orderProduct.status}}</label>
+    <br>
+    <label>Update Status</label><br><br>
+    <input type="radio" value="Placed" name="status">
+    <label>Placed</label><br>
+    <input type="radio" value="Shipped" name="status">
+    <label>Shipped</label><br>
+    <input type="radio" value="Delivered" name="status">
+    <label>Delivered</label><br>
+    <input type="radio" value="Cancelled" name="status">
+    <label>Cancelled</label><br>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</section>

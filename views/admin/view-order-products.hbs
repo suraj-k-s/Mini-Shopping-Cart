@@ -1,0 +1,23 @@
+<section>
+  <div class="container-fluid mt-5">
+    <div class="row">
+      {{#each orderItems}}
+        <div class="col-12 col-md-3 mt-2">
+          <div class="card" style="width: auto;">
+            <img src="/images/{{this.product._id}}.jpg" class="card-img-top products-card-users" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{this.product.Name}}</h5>
+              <p class="card-text">Rs. {{this.product.Price}}</p>
+              <p class="card-text">Quantity. {{this.quantity}}</p>
+              <a href="/product?id={{this.product._id}}" style="text-decoration: none;"><p class="card-text">{{this.product.Description}}</p></a>
+
+            </div>
+          </div>
+        </div>
+      {{/each}}
+
+
+
+    </div>
+  </div>
+</section>
